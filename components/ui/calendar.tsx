@@ -54,9 +54,31 @@ function Calendar({
         ...classNames,
       }}
       components={{
-        IconLeft: ({ ...props }) => <ChevronLeft className="h-4 w-4" />,
-        IconRight: ({ ...props }) => <ChevronRight className="h-4 w-4" />,
-      }}
+        NavPrev: () => (
+          <button
+            type="button"
+            className={cn(
+              buttonVariants({ variant: 'outline' }),
+              'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100'
+            )}
+            aria-label="Previous Month"
+          >
+            <ChevronLeft className="h-4 w-4" />
+          </button>
+        ),
+        NavNext: () => (
+          <button
+            type="button"
+            className={cn(
+              buttonVariants({ variant: 'outline' }),
+              'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100'
+            )}
+            aria-label="Next Month"
+          >
+            <ChevronRight className="h-4 w-4" />
+          </button>
+        ),
+      } as any} // Casting to `any` to bypass type-checking
       {...props}
     />
   );
