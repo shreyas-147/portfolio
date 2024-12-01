@@ -8,7 +8,7 @@ import { CursorGlow } from "@/components/cursor-glow";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Your Name - Personal Portfolio",
+  title: "Shreyas Kolte - Personal Portfolio",
   description: "Software Developer & Tech Enthusiast",
 };
 
