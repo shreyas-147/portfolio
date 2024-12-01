@@ -7,19 +7,19 @@ import { RefreshCw } from "lucide-react";
 
 const technologies = [
   { name: "Next.js", icon: "TS", image: "https://i.ibb.co/k5T9wBV/Next-js.png" },
-  { name: "Node.js", image:"https://i.ibb.co/yy1Jz0n/Node-js.png" },
+  { name: "Node.js", image: "https://i.ibb.co/yy1Jz0n/Node-js.png" },
   { name: "Java", image: "https://i.ibb.co/QYbQZH4/Java.png" },
   { name: "JavaScript", image: "https://i.ibb.co/TMj022X/Java-Script.png" },
   { name: "AWS", image: "https://i.ibb.co/NpR1yvT/AWS.png" },
-  {name:"Spring", image:"https://i.ibb.co/fSvW8d8/Spring.png"},
-  {name:"Postgre", image:"https://i.ibb.co/SywY91W/Postgres-SQL.png"},
-  {name:"React", image:"https://i.ibb.co/QmHz2bx/React.png"},
-  {name:"MongoDB", image:"https://i.ibb.co/qCY8gtZ/MongoDB.png"},
-  {name:"Python", image:"https://i.ibb.co/xGGgTTT/Python.png"},
-  {name:"Postman", image:"https://i.ibb.co/5K6LdGh/Postman.png"},
-  {name:"Docker", image:"https://i.ibb.co/v4zZB1W/Docker.png"},
-  {name:"Kubernetes", image:"https://i.ibb.co/dt4rtPn/Kubernetes.png"},
-  {name:"Hibernate", image:"https://i.ibb.co/rbw5XjL/Hibernate.png"},
+  { name: "Spring", image: "https://i.ibb.co/fSvW8d8/Spring.png" },
+  { name: "Postgre", image: "https://i.ibb.co/SywY91W/Postgres-SQL.png" },
+  { name: "React", image: "https://i.ibb.co/QmHz2bx/React.png" },
+  { name: "MongoDB", image: "https://i.ibb.co/qCY8gtZ/MongoDB.png" },
+  { name: "Python", image: "https://i.ibb.co/xGGgTTT/Python.png" },
+  { name: "Postman", image: "https://i.ibb.co/5K6LdGh/Postman.png" },
+  { name: "Docker", image: "https://i.ibb.co/v4zZB1W/Docker.png" },
+  { name: "Kubernetes", image: "https://i.ibb.co/dt4rtPn/Kubernetes.png" },
+  { name: "Hibernate", image: "https://i.ibb.co/rbw5XjL/Hibernate.png" },
 ];
 
 export function TechPlayground() {
@@ -31,30 +31,23 @@ export function TechPlayground() {
   const resetBoxes = () => {
     if (!engineRef.current || !renderRef.current || !boxesRef.current.length) return;
 
-    // Track positions for new reset
     let xPosition = 50;
     let yPosition = 50;
     const maxWidth = renderRef.current.canvas.width;
     const boxSize = 60;
     const padding = 10;
 
-    boxesRef.current.forEach((box, i) => {
+    boxesRef.current.forEach((box) => {
       if (xPosition + boxSize + padding > maxWidth) {
-        // Move to the next row if the box exceeds the width
-        xPosition = 50; // Reset x to start at the left again
-        yPosition += boxSize + padding; // Move down by box height + padding
+        xPosition = 50;
+        yPosition += boxSize + padding;
       }
 
-      // Reset the position of each box
-      Matter.Body.setPosition(box, {
-        x: xPosition,
-        y: yPosition,
-      });
+      Matter.Body.setPosition(box, { x: xPosition, y: yPosition });
       Matter.Body.setVelocity(box, { x: 0, y: 0 });
       Matter.Body.setAngularVelocity(box, 0);
       Matter.Body.setAngle(box, 0);
 
-      // Update x position for the next box
       xPosition += boxSize + padding;
     });
   };
@@ -101,7 +94,7 @@ export function TechPlayground() {
       }),
       Bodies.rectangle(render.canvas.width / 2, -30, render.canvas.width, 60, {
         isStatic: true,
-        render: { fillStyle: 'transparent' },
+        render: { fillStyle: "transparent" },
       }),
     ];
 
@@ -110,18 +103,17 @@ export function TechPlayground() {
     let xPosition = 50;
     let yPosition = 50;
     const maxWidth = render.canvas.width;
-    const boxes = technologies.map((tech, i) => {
+    const boxes = technologies.map((tech) => {
       if (xPosition + boxSize + padding > maxWidth) {
-        // Move to the next row if the box exceeds the width
-        xPosition = 50; // Reset x to start at the left again
-        yPosition += boxSize + padding; // Move down by box height + padding
+        xPosition = 50;
+        yPosition += boxSize + padding;
       }
 
       const box = Bodies.rectangle(xPosition, yPosition, boxSize, boxSize, {
         render: {
           sprite: {
             texture: tech.image,
-            xScale: 1, // Temporary values
+            xScale: 1,
             yScale: 1,
           },
         },
@@ -130,19 +122,20 @@ export function TechPlayground() {
         restitution: 0.3,
       });
 
-      // Adjust sprite scale to fit the box
       if (tech.image) {
         const img = new Image();
         img.src = tech.image;
         img.onload = () => {
-          const scaleX = boxSize / img.width;
-          const scaleY = boxSize / img.height;
-          box.render.sprite.xScale = Math.min(scaleX, scaleY);
-          box.render.sprite.yScale = Math.min(scaleX, scaleY);
+          if (box.render.sprite) {
+            const scaleX = boxSize / img.width;
+            const scaleY = boxSize / img.height;
+            box.render.sprite.xScale = Math.min(scaleX, scaleY);
+            box.render.sprite.yScale = Math.min(scaleX, scaleY);
+          }
         };
       }
 
-      xPosition += boxSize + padding; // Move to the next x position
+      xPosition += boxSize + padding;
       return box;
     });
 
@@ -153,9 +146,7 @@ export function TechPlayground() {
       mouse: mouse,
       constraint: {
         stiffness: 0.2,
-        render: {
-          visible: false,
-        },
+        render: { visible: false },
       },
     });
 
@@ -188,4 +179,3 @@ export function TechPlayground() {
     </div>
   );
 }
-
