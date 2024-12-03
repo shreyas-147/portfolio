@@ -48,8 +48,8 @@ export function About() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <Card className="overflow-hidden rounded-3xl border shadow-lg">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Card className="overflow-hidden rounded-3xl border shadow-lg md:col-span-1">
           <div className="relative aspect-square">
             <Image
               src="https://i.ibb.co/k0RZWBp/Whats-App-Image-2024-11-20-at-17-45-14-06d5460f.jpg"
@@ -60,34 +60,38 @@ export function About() {
           </div>
         </Card>
 
-        <Card className="p-6 space-y-6 rounded-3xl">
-          <div className="space-y-4">
-            <h2 className="text-2xl font-semibold tracking-tight">
-              About Me
-            </h2>
-            <p className="text-muted-foreground">
-            A driven Computer Science graduate specializing in software development, I am actively pursuing opportunities in Full-time Software Engineering roles. With over a year of hands-on experience in full-stack development, proficient in object-oriented programming, and adept at deploying micro-services in the cloud, I am equipped with the skills and determination to thrive in dynamic tech environments. Eager to contribute innovative solutions and collaborate with talented teams to drive impactful outcomes.
-            </p>
-          </div>
+        <div className="md:col-span-2 space-y-8">
+          <Card className="p-6 rounded-3xl">
+            <div className="space-y-4">
+              <h2 className="text-2xl font-semibold tracking-tight">
+                About Me
+              </h2>
+              <p className="text-muted-foreground">
+                A driven Computer Science graduate specializing in software development, I am actively pursuing opportunities in Full-time Software Engineering roles. With over a year of hands-on experience in full-stack development, proficient in object-oriented programming, and adept at deploying micro-services in the cloud, I am equipped with the skills and determination to thrive in dynamic tech environments. Eager to contribute innovative solutions and collaborate with talented teams to drive impactful outcomes.
+              </p>
+            </div>
+          </Card>
 
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <Brain className="h-5 w-5" />
-              <h3 className="text-xl font-semibold">Skills & Technologies</h3>
+          <Card className="p-6 rounded-3xl">
+            <div className="space-y-4">
+              <div className="flex items-center space-x-2">
+                <Brain className="h-5 w-5" />
+                <h3 className="text-xl font-semibold">Skills & Technologies</h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {skills.map((skill) => (
+                  <Badge 
+                    key={skill} 
+                    variant="secondary" 
+                    className="rounded-full"
+                  >
+                    {skill}
+                  </Badge>
+                ))}
+              </div>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {skills.map((skill) => (
-                <Badge 
-                  key={skill} 
-                  variant="secondary" 
-                  className="rounded-full"
-                >
-                  {skill}
-                </Badge>
-              ))}
-            </div>
-          </div>
-        </Card>
+          </Card>
+        </div>
       </div>
     </section>
   );
