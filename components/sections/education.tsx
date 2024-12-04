@@ -7,14 +7,14 @@ const education = [
     degree: "MS Computer Science",
     years: "2022 - 2024",
     logo: "https://i.ibb.co/g6ws3nm/6144775a5953a50004ee16bc.png",
-    gpa:"CGPA: 8.38 / 10"
+    gpa:"CGPA: 3.93 / 4"
   },
   {
     school: "Ramdeobaba University",
     degree: "B.E Computer Science and Engineering",
     years: "2017 - 2021",
     logo: "https://i.ibb.co/CvXGFyM/id-Bj-LMT-ay-logos-removebg-preview.png",
-    gpa:"GPA: 3.93 / 4"
+    gpa:"GPA: 8.38 / 10"
   },
 ];
 
