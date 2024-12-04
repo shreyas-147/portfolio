@@ -30,8 +30,8 @@ export function About() {
     <section id="about" className="space-y-12">
       <div className="flex flex-col items-center space-y-4">
         <h1 className="text-4xl font-bold tracking-tight text-center">
-          Hey, I'm Shreyas 👋
-        </h1>
+          Hey, I'm Shreyas <span className="text">👋</span>
+        </h1>        
         <p className="text-xl text-muted-foreground text-center">
           Software Developer & Tech Enthusiast
         </p>

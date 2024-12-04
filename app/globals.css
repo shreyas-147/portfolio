@@ -72,3 +72,26 @@
   mix-blend-mode: difference;
   transition: transform 0.1s ease;
 }
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.text {
+  display: inline-block;
+  animation: wiggle 1s ease infinite;
+}
