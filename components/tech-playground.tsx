@@ -169,7 +169,7 @@ export function TechPlayground() {
     <div className="relative h-[300px] rounded-3xl bg-muted/50 overflow-hidden">
       <div ref={sceneRef} className="absolute inset-0">
         <div className="absolute top-4 left-4 right-4 flex justify-between items-center z-10">
-          <h3 className="text-lg font-semibold">Playground!</h3>
+          <h3 className="text-lg font-semibold">My Playground!</h3>
           <Button variant="outline" size="sm" className="rounded-full" onClick={resetBoxes}>
             <RefreshCw className="h-4 w-4 mr-2" />
             Reset

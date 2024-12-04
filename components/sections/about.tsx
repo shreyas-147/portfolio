@@ -6,14 +6,23 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 
 const skills = [
+  "Java",
+  "JavaScript",
   "TypeScript",
   "React",
   "Next.js",
   "Node.js",
   "Python",
   "SQL",
+  "NoSQL",
   "AWS",
   "Docker",
+  "Java",
+  "Spring Boot",
+  "Hibernate",
+  "HTML",
+  "CSS",
+
 ];
 
 export function About() {
