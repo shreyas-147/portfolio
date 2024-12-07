@@ -8,6 +8,8 @@ const nextConfig = {
     unoptimized: true,
     domains: ["drive.google.com", "images.unsplash.com"],
   },
+  basePath: "/portfolio",
+  assetPrefix: "/portfolio",
 };
 
 module.exports = nextConfig;

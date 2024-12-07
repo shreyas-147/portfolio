@@ -13,23 +13,23 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/favicon.ico",
+        url: "/portfolio/favicon.ico",
         sizes: "any",
       },
       {
-        url: "/icon.png",
+        url: "/portfolio/icon.png",
         type: "image/png",
         sizes: "32x32",
       },
       {
-        url: "/apple-icon.png",
+        url: "/portfolio/apple-icon.png",
         type: "image/png",
         sizes: "180x180",
       },
     ],
     apple: [
       {
-        url: "/apple-icon.png",
+        url: "/portfolio/apple-icon.png",
         sizes: "180x180",
       },
     ],
