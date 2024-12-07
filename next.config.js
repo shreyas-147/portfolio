@@ -6,11 +6,7 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
-    domains: [
-      "drive.google.com",
-      "images.unsplash.com",
-      // Add other domains as needed
-    ],
+    domains: ["drive.google.com", "images.unsplash.com"],
   },
 };
 
