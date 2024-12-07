@@ -24,7 +24,7 @@ const sections = [
   },
   {
     title: "Work",
-    href: "#work",
+    href: "/#work",
   },
   {
     title: "Projects",
@@ -39,18 +39,36 @@ const sections = [
 export function Navigation() {
   const { theme, setTheme } = useTheme();
 
+
+  const handleScroll = (e: React.MouseEvent, href: string) => {
+    e.preventDefault(); // Prevent default link behavior
+    const target = document.querySelector(href); // Find the target element
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" }); // Smooth scroll
+    }
+  };
+
   return (
     <div className="fixed top-0 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-50">
       <div className="container relative flex h-14 items-center justify-center">
         <NavigationMenu>
           <NavigationMenuList>
             {sections.map((section) => (
+              // <NavigationMenuItem key={section.href}>
+              //   <Link href={section.href} legacyBehavior passHref>
+              //     <NavigationMenuLink className={cn("px-4 py-2 hover:bg-accent rounded-full transition-colors")}>
+              //       {section.title}
+              //     </NavigationMenuLink>
+              //   </Link>
+              // </NavigationMenuItem>
               <NavigationMenuItem key={section.href}>
-                <Link href={section.href} legacyBehavior passHref>
-                  <NavigationMenuLink className={cn("px-4 py-2 hover:bg-accent rounded-full transition-colors")}>
-                    {section.title}
-                  </NavigationMenuLink>
-                </Link>
+                <a
+                  href={section.href}
+                  onClick={(e) => handleScroll(e, section.href)}
+                  className={cn("px-4 py-2 hover:bg-accent rounded-full transition-colors")}
+                >
+                  {section.title}
+                </a>
               </NavigationMenuItem>
             ))}
           </NavigationMenuList>
