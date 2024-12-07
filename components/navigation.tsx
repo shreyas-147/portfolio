@@ -16,23 +16,23 @@ import { Button } from "./ui/button";
 const sections = [
   {
     title: "About",
-    href: "#about",
+    href: "/portfolio/#about",
   },
   {
     title: "Education",
-    href: "#education",
+    href: "/portfolio/#education",
   },
   {
     title: "Work",
-    href: "#work",
+    href: "/portfolio/#work",
   },
   {
     title: "Projects",
-    href: "#projects",
+    href: "/portfolio/#projects",
   },
   {
     title: "Contact",
-    href: "#contact",
+    href: "/portfolio/#contact",
   },
 ];
 
