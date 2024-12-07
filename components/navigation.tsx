@@ -28,11 +28,11 @@ const sections = [
   },
   {
     title: "Projects",
-    href: "#projects",
+    href: "/#projects",
   },
   {
     title: "Contact",
-    href: "/portfolio/#contact",
+    href: "/#contact",
   },
 ];
 
