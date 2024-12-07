@@ -24,7 +24,7 @@ const sections = [
   },
   {
     title: "Work",
-    href: "/#work",
+    href: "#work",
   },
   {
     title: "Projects",
