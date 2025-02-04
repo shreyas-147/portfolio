@@ -7,8 +7,8 @@ const experience = [
     company: "WUD Events",
     position: "Software Engineer",
     period: "2024 - Present",
-    description: "• Designed and developed the WUD web app using React.js, with a Python, Django backend and AWS Lambda for real-time event discovery, reducing response latency by 30% through optimized Redis caching strategies.\n• Collaborated in agile sprints using Jira to align features with user needs, optimizing feature delivery by 25%, shortening development cycles, and improving team velocity. Manage cloud infrastructure using Terraform.\n• Used Leaflet library to enable users to find events around them using a map, thus improving user engagement and satisfaction.\n• Refined user experience through Figma-based prototyping and iterative UI/UX design meetings, ensuring seamless interaction across mobile interfaces, leading to a 20% increase in user retention.",
-    technologies: ["React.js", "Python", "Django", "AWS", "Figma", "JavaScript"],
+    description: "• Designed and developed the WUD web app using React.js, with a C#, ASP.NET backend and AWS Lambda for real-time event discovery, reducing response latency by 30% through optimized Redis caching strategies.\n• Collaborated in agile sprints using Jira to align features with user needs, optimizing feature delivery by 25%, shortening development cycles, and improving team velocity. Manage cloud infrastructure using Terraform.\n• Used Leaflet library to enable users to find events around them using a map, thus improving user engagement and satisfaction.\n• Refined user experience through Figma-based prototyping and iterative UI/UX design meetings, ensuring seamless interaction across mobile interfaces, leading to a 20% increase in user retention.",
+    technologies: ["React.js", "C#", "ASP.NET", "AWS", "Figma", "JavaScript"],
   },
   {
     company: "Principal Financial Group",

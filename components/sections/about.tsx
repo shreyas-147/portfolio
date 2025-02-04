@@ -7,9 +7,10 @@ import { Button } from "../ui/button";
 
 const skills = [
   "Java",
+  "C#",
   "JavaScript",
   "TypeScript",
-  "React",
+  "React.js",
   "Next.js",
   "Node.js",
   "Python",
@@ -17,7 +18,8 @@ const skills = [
   "NoSQL",
   "AWS",
   "Docker",
-  "Java",
+  "Kubernetes",
+  "ASP.NET",
   "Spring Boot",
   "Hibernate",
   "HTML",
